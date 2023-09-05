@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/*==========================================*/
+/*==========VARIABLES Y CONSTANTES==========*/
+/*==========================================*/
+
+:root{
+    --negro: #000000;
+    --verde: #1A4D2E;
+    --naranja: #FF9F29;
+    --crema: #FAF3E3;
+    --fuente: 'Roboto Mono', monospace;
+    --fuenteSecundaria: 'Silkscreen', cursive;
+}
+
+img{
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente);
+}
+
+html{
+    font-size: 62.5%; /*Eso es para poder utilizar los rem en el codigo css*/
+    box-sizing: border-box; /**Sirve para que el tamaño de una imagen se quede fija y no se agregue el tamaño de un padding, sose llegua a agregar**/
+}
+
+*,*:before, *:after{ /*Tambien tiene que ver con lo del tamaño de la imagen*/
+    box-sizing: inherit;
+}
+
+/*==========================================*/
+/*=============BARAA NAVEGACION=============*/
+/*==========================================*/
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 3rem 0;
+    background-color: var(--negro);
+    align-items: center;
+}
+.nav--logo, .nav--logo1{
+    color: var(--naranja);
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--fuenteSecundaria);
+}
+.nav--logo1{
+    position: fixed;
+    display: none;
+}
+.nav--enlaces{
+    color: white;
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 0 2rem;
+    padding: 2rem 0;
+    border-bottom: 0.2rem solid transparent;
+    transition: 400ms ease-in-out;
+}
+.nav--enlaces:hover{
+    color: var(--naranja);
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid var(--naranja);
+}
+
+/*==========================================*/
+/*============= MAIN CONTENIDO =============*/
+/*==========================================*/
+
+/*SOBRE MI*/
+#sobre-mi{
+    background-color: var(--negro);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 0 10rem 4rem 10rem;
+}
+.titulo{
+    margin: 0;
+    font-family: var(--fuenteSecundaria);
+    font-size: 4rem;
+}
+.sobreMi--text, .servicios--text, .proyecto--text, .contacto--text{
+    padding: 0 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-left: 0.2rem solid var(--naranja);
+}
+.subtitulo1, .subtitulo1 span, .subtitulo2, .subtitulo2 span{
+    font-family: var(--fuenteSecundaria);
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+.subtitulo1 span, .subtitulo2 span{
+    color: var(--naranja);
+}
+.subtitulo2{
+    padding: 3rem 0 2rem 0;
+}
+.sobreMi--info,.proyectos--info, .servicios--info{
+    padding: 0 2rem;
+    line-height: 2rem;
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-left: 0.2rem solid var(--naranja);
+}
+.tecnologias--titulo, .tecnologias--titulo span{
+    font-size: 4rem;
+    font-family: var(--fuenteSecundaria);
+    padding-bottom: 1rem;
+}
+.tecnologias--titulo span{
+    color: var(--naranja);
+}
+.tecnologias{
+    display: flex;
+}
+.tecnologias--con{
+    list-style: none;
+    margin-right: 6rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.tecnologias--futuras{
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--naranja);
+    font-weight: 400;
+}
+
+/*SERVICIOS*/
+#servicios{
+    background-color: var(--negro);
+    display: flex;
+    flex-direction: column;
+    padding: 0 10rem;
+    color: white;
+    padding-bottom: 4rem;
+}
+.servicios--info{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4rem;
+    margin: 2rem 2rem;
+}
+.servicio--con, .proyectos--con{
+    border: 0.2rem solid var(--naranja);
+    padding: 1rem;
+    transition: 300ms ease-in-out;
+}
+.servicio--con:hover{
+    transform: scale(1.06);
+    border-color: #ff9f29a2;
+}
+.servicio--titulo h2{
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+    border-bottom: 0.2rem solid var(--naranja);
+    padding-bottom: 1rem;
+}
+.servicio--lista ul{
+    padding: 1rem;
+    font-family: var(--fuente);
+}
+.servicio--lista ul li{
+    list-style: none;
+}
+/*PROYECTOS*/
+#proyectos{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10rem;
+    color: #000000;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.proyectos--info{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2rem;
+}
+.proyectos--con{
+    margin-bottom: 2rem;
+}
+/*CONTACTO*/
+#contacto{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10rem;
+    color: var(--negro);
+}
+.contacto--info{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-left: 0.2rem solid var(--naranja);
+}
+.redes-sociales{
+    margin-left: 2rem;
+}
+.redes-sociales a li{
+    list-style: none;
+    font-size: 1.5rem;
+}
+.redes-sociales a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--negro);
+    text-decoration: none;
+}
+.redes-sociales a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+/*FOOTER*/
+.footer{
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--negro);
+    font-size: 1.2rem;
+}
+
+.nav-barra--con{
+    display: flex;
+    align-items: center;
+}
+#menu{
+    display: none;
+}
+/*=============================================------------=============================================*/
+/*=============================================-RESPONSIVE-=============================================*/
+/*=============================================------------=============================================*/
+
+@media screen and (max-width: 720px) {
+    .servicios--info{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 2rem;
+    }
+    .servicio--con:last-child{
+        margin-top: 2rem;
+    }
+    .proyectos--info{
+        display: flex;
+        flex-direction: column;
+    }
+    .proyectos--con:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #sobre-mi{
+        background-color: var(--negro);
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding: 0 4rem 4rem 4rem;
+    }
+    #servicios{
+        background-color: var(--negro);
+        display: flex;
+        flex-direction: column;
+        padding: 0 4rem;
+        color: white;
+        padding-bottom: 4rem;
+    }
+    #proyectos{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 0 4rem;
+        color: #000000;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    #contacto{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 0 4rem;
+        color: var(--negro);
+    }
+    .nav--barra{
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+        background-color: white;
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        right: -25rem;
+        padding: 4rem;
+        z-index: 1;
+    }
+    .nav--enlaces{
+        color: var(--negro);
+        margin: 0 2rem;
+        padding: 1rem 0;
+        border: none;
+        transition: 300ms ease-in-out;
+    }
+    .nav--enlaces:hover{
+        color: var(--naranja);
+        padding: 0.5rem 0;
+        border: none;
+    }
+    .nav--logo1{
+        text-align: center;
+        position: relative;
+        color: var(--naranja);
+        margin-bottom: 2rem;
+        display: block;
+    }
+    #back-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        display: none;
+    }
+    #menu{
+        display: flex;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #sobre-mi{
+        background-color: var(--negro);
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding: 0 1rem 4rem 1rem;
+    }
+    #servicios{
+        background-color: var(--negro);
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        color: white;
+        padding-bottom: 4rem;
+    }
+    #proyectos{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        color: #000000;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+    }
+    #contacto{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        color: var(--negro);
+    }
+
+    .sobreMi--info,.proyectos--info, .servicios--info{
+        padding: 0 2rem;
+        line-height: 2rem;
+        font-family: var(--fuente);
+        font-size: 1.5rem;
+        margin-left: 0rem;
+        margin-top: 1rem;
+        border-left: 0.2rem solid var(--naranja);
+    }
+    .contacto--info{
+        margin-left: 0rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .tecnologias--con{
+        list-style: none;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .tecnologias{
+        display: flex;
+        flex-direction: column;
+    }
+    .tecnologias--con{
+        list-style: none;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+    .tecnologias--futuras{
+        font-family: var(--fuente);
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--naranja);
+        font-weight: 400;
+    }
+    .titulo{
+        font-size:2.5rem;
+    }
+    .subtitulo1, .subtitulo1 span, .subtitulo2, .subtitulo2 span{
+        font-size: 1.5rem;
+    }
+    .servicio--titulo{
+        font-size: 1rem;
+    }
+    .servicio--lista{
+        font-size: 1.2rem;
+    }
+    .redes-sociales a li{
+        font-size: 1.2rem;
+    }
+}
